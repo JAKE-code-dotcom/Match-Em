@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bkugpwsna7s8p"]
+
+[ext_resource type="FontFile" uid="uid://c4vgj3l730cgw" path="res://font/child.otf" id="1_1qcwk"]
+[ext_resource type="Script" uid="uid://dkvy727arflgp" path="res://scenes/retry.gd" id="1_3xooq"]
+[ext_resource type="Texture2D" uid="uid://dn022cvcrj14u" path="res://Player/P4.png" id="2_3xooq"]
+[ext_resource type="Texture2D" uid="uid://b35hksr2j48f5" path="res://squares/S1.png" id="3_0750t"]
+[ext_resource type="Texture2D" uid="uid://cijejxp3fmuou" path="res://Player/P2.png" id="4_p418h"]
+[ext_resource type="Texture2D" uid="uid://mpapt2wacxuk" path="res://squares/S3.png" id="5_bxkjp"]
+[ext_resource type="Texture2D" uid="uid://bb6p162f826vx" path="res://triangles/T2.png" id="6_xgov6"]
+[ext_resource type="Texture2D" uid="uid://bx7yyn11yicr4" path="res://triangles/T3.png" id="7_8ec6t"]
+[ext_resource type="Texture2D" uid="uid://bh07k8eg2mctk" path="res://Player/P3.png" id="8_ch65l"]
+[ext_resource type="Texture2D" uid="uid://xp3q46a351k1" path="res://squares/S2.png" id="9_mxev5"]
+[ext_resource type="Texture2D" uid="uid://cfr75vdwu72rh" path="res://circles/C1.png" id="10_fr1jk"]
+
+[node name="Retry" type="Node2D" unique_id=368756513]
+script = ExtResource("1_3xooq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=648574044]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1629565059]
+offset_right = 1762.0
+offset_bottom = 989.0
+color = Color(0.28183526, 0.01847393, 0.33423847, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1488597150]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -52.5
+offset_right = 172.5
+offset_bottom = 52.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=400937728]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_1qcwk")
+theme_override_font_sizes/font_size = 100
+text = "OOPS..."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1456301796]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_1qcwk")
+theme_override_font_sizes/font_size = 49
+text = "Press space to try again."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="shapes" type="Node2D" parent="CanvasLayer" unique_id=1646981219]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/shapes" unique_id=1625323746]
+offset_left = -99.0
+offset_top = 256.0
+offset_right = 751.5167
+offset_bottom = 1005.59924
+rotation = 0.5913219
+texture = ExtResource("2_3xooq")
+
+[node name="TextureRect9" type="TextureRect" parent="CanvasLayer/shapes" unique_id=571239717]
+offset_left = -134.0
+offset_top = -123.0
+offset_right = 716.5167
+offset_bottom = 626.59924
+rotation = 0.5913219
+texture = ExtResource("3_0750t")
+
+[node name="TextureRect8" type="TextureRect" parent="CanvasLayer/shapes" unique_id=749478934]
+offset_left = 349.0
+offset_top = 392.0
+offset_right = 1199.5167
+offset_bottom = 1141.5992
+rotation = 0.5913219
+texture = ExtResource("4_p418h")
+
+[node name="TextureRect10" type="TextureRect" parent="CanvasLayer/shapes" unique_id=120334652]
+offset_left = 643.0
+offset_top = 526.99994
+offset_right = 1493.5167
+offset_bottom = 1276.5991
+rotation = 0.2617994
+texture = ExtResource("5_bxkjp")
+
+[node name="TextureRect12" type="TextureRect" parent="CanvasLayer/shapes" unique_id=1925614735]
+offset_left = 936.99994
+offset_top = 624.00006
+offset_right = 1971.0
+offset_bottom = 1441.0
+rotation = -0.07844362
+texture = ExtResource("6_xgov6")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/shapes" unique_id=110564964]
+offset_left = -136.99998
+offset_top = -535.0
+offset_right = 906.41846
+offset_bottom = 208.89966
+rotation = 0.5913219
+texture = ExtResource("7_8ec6t")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/shapes" unique_id=444568581]
+offset_left = 1274.0
+offset_top = 560.00006
+offset_right = 2317.4185
+offset_bottom = 1303.8994
+rotation = 3.6458247
+texture = ExtResource("8_ch65l")
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/shapes" unique_id=539115661]
+offset_left = 720.0
+offset_top = 552.0001
+offset_right = 1763.4185
+offset_bottom = 1295.8998
+rotation = 3.6458247
+texture = ExtResource("9_mxev5")
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/shapes" unique_id=1456450532]
+offset_left = 1950.0
+offset_top = 974.0
+offset_right = 2993.4185
+offset_bottom = 1717.8997
+rotation = 3.6458247
+texture = ExtResource("7_8ec6t")
+
+[node name="TextureRect7" type="TextureRect" parent="CanvasLayer/shapes" unique_id=1382314351]
+offset_left = 2038.0001
+offset_top = 1357.0
+offset_right = 3081.4185
+offset_bottom = 2100.9
+rotation = 3.6458247
+texture = ExtResource("10_fr1jk")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/shapes" unique_id=38482240]
+offset_left = 1622.0
+offset_top = -538.0
+offset_right = 2549.7476
+offset_bottom = 261.57977
+rotation = 0.5913219
+texture = ExtResource("2_3xooq")

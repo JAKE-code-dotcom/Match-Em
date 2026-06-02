@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dnwqhrcidgoun"]
+
+[ext_resource type="Texture2D" uid="uid://dn022cvcrj14u" path="res://Player/P4.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bhat3itmvgvpk" path="res://scenes/player.gd" id="1_g2els"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1552422847]
+collision_mask = 2
+script = ExtResource("1_g2els")
+
+[node name="PlayerImage" type="Sprite2D" parent="." unique_id=1483552282]
+position = Vector2(15, -0.99999976)
+scale = Vector2(0.8669014, 0.8649425)
+texture = ExtResource("1_3vyb7")
+
+[node name="PlayerColl" type="CollisionPolygon2D" parent="." unique_id=1701251902]
+polygon = PackedVector2Array(-3, -53, 13, -23, 58, -29, 30, 10, 42, 55, 5, 22, -26, 63, -20, 18, -67, 22, -14, -23)
+
+[node name="DashTimer" type="Timer" parent="." unique_id=781593121]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]

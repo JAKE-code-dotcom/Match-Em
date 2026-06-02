@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://mtnvh6semvu1"]
+
+[ext_resource type="PackedScene" uid="uid://dnwqhrcidgoun" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://86jrrqyi8354" path="res://scenes/level.gd" id="1_w8frs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(1756.625, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(43.5, 996)
+
+[node name="Level" type="Node2D" unique_id=261534105]
+script = ExtResource("1_w8frs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1510536501]
+offset_right = 1922.0
+offset_bottom = 1083.0
+color = Color(0, 0, 0, 0.63529414)
+
+[node name="Player" parent="." unique_id=1552422847 instance=ExtResource("1_2q6dc")]
+position = Vector2(569, 287)
+
+[node name="StartTimer" type="Timer" parent="." unique_id=153598769]
+wait_time = 3.0
+one_shot = true
+
+[node name="Borders" type="Node2D" parent="." unique_id=2059676779]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=2138431448]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1785472392]
+position = Vector2(882.6875, -2)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1948176621]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1452629826]
+position = Vector2(-7.5, 499)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1496940936]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=1831498966]
+position = Vector2(1783, 499)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=233587064]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=752627304]
+position = Vector2(889.125, 1005)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="shapes" type="Node2D" parent="." unique_id=953031844]
+
+[node name="LevelTimer" type="Timer" parent="." unique_id=408085070]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
