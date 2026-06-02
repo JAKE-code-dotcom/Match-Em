@@ -11,6 +11,10 @@ var collected := 0
 func _ready() -> void:
 	$Player/PlayerImage.texture = load("res://Player/P4.png")
 	$StartTimer.start()
+	$ScoreRect/Sc.text = "Score : "+str(ScoreManager.score)
+
+func _process(_delta: float) -> void:
+	$TimeRect/Time.text = "%02d:%02d" % time_lf()
 
 #the shape spawning function (ran if the level timer did not end and the player collected its colors)
 func set_up():
@@ -62,6 +66,7 @@ func _on_timer_timeout() -> void:
 	$Player/PlayerImage.texture = load("res://Player/P"+str(ff)+".png")
 	player_color = ff
 	$LevelTimer.start()
+	
 	await(get_tree().create_timer(1.0).timeout)
 	can_coll = true
 func _on_correct (shape) :
@@ -74,6 +79,7 @@ func _on_correct (shape) :
 	
 func _on_incorrect(shape):
 	if can_coll == true :
+		ScoreManager.reset_score()
 		get_tree().change_scene_to_file("res://scenes/retry.tscn")
 		
 
@@ -83,3 +89,8 @@ func _on_level_timer_timeout() -> void:
 		ScoreManager.reset_score()
 		get_tree().change_scene_to_file("res://scenes/retry.tscn")
 	
+func time_lf () : 
+	var time_left = $LevelTimer.time_left
+	var minute = floor(time_left /60)
+	var second = int (time_left) %60
+	return[minute , second]
