@@ -8,13 +8,16 @@ var player_color := 4
 var can_coll := false
 var collected := 0
 # Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
 	$Player/PlayerImage.texture = load("res://Player/P4.png")
 	$StartTimer.start()
 	$ScoreRect/Sc.text = "Score : "+str(ScoreManager.score)
 
+
 func _process(_delta: float) -> void:
-	$TimeRect/Time.text = "%02d:%02d" % time_lf()
+	$Time.text = "%02d:%02d" % time_lf()
 
 #the shape spawning function (ran if the level timer did not end and the player collected its colors)
 func set_up():
@@ -65,17 +68,21 @@ func _on_timer_timeout() -> void:
 	var ff = rng.randi_range(1,3)
 	$Player/PlayerImage.texture = load("res://Player/P"+str(ff)+".png")
 	player_color = ff
-	$LevelTimer.start()
+	$LevelTimer.start(Timermanager.time)
 	
 	await(get_tree().create_timer(1.0).timeout)
 	can_coll = true
+	
+	
 func _on_correct (shape) :
 	if can_coll : 
 		collected+=1
 		shape.queue_free()
 	if collected == 3 :
 		ScoreManager.add_points(1)
+		Timermanager.sub_time($LevelTimer)
 		get_tree().reload_current_scene()
+	
 	
 func _on_incorrect(shape):
 	if can_coll == true :
@@ -87,8 +94,10 @@ func _on_incorrect(shape):
 func _on_level_timer_timeout() -> void:
 	if collected < 3 :
 		ScoreManager.reset_score()
+		Timermanager.reset_timer($LevelTimer)
 		get_tree().change_scene_to_file("res://scenes/retry.tscn")
 	
+
 func time_lf () : 
 	var time_left = $LevelTimer.time_left
 	var minute = floor(time_left /60)

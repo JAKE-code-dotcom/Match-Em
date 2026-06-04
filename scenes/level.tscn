@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dnwqhrcidgoun" path="res://scenes/player.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://86jrrqyi8354" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="FontFile" uid="uid://c4vgj3l730cgw" path="res://font/child.otf" id="3_w8frs"]
+[ext_resource type="PackedScene" uid="uid://c6obmrmsfg5ot" path="res://scenes/pause.tscn" id="4_mx8sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(1756.625, 26)
@@ -16,7 +17,7 @@ script = ExtResource("1_w8frs")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1510536501]
 offset_right = 1833.0
 offset_bottom = 1074.0
-color = Color(0, 0, 0, 0.63529414)
+color = Color(0.2509804, 0, 0, 0.63529414)
 
 [node name="Label" type="Label" parent="." unique_id=1090833577]
 offset_left = 512.0
@@ -65,7 +66,6 @@ shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="LevelTimer" type="Timer" parent="." unique_id=408085070]
 wait_time = 5.0
-one_shot = true
 
 [node name="ScoreRect" type="ColorRect" parent="." unique_id=1747090158]
 offset_right = 202.0
@@ -85,23 +85,22 @@ theme_override_fonts/font = ExtResource("3_w8frs")
 theme_override_font_sizes/font_size = 37
 text = "Score : "
 
-[node name="TimeRect" type="ColorRect" parent="." unique_id=1008827667]
-offset_left = 875.0
-offset_top = 12.0
-offset_right = 1077.0
-offset_bottom = 68.0
-color = Color(0.039215688, 0.10980392, 0.24705882, 1)
-
-[node name="Time" type="Label" parent="TimeRect" unique_id=1890420792]
-layout_mode = 1
+[node name="Time" type="Label" parent="." unique_id=1890420792]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.9110001
-offset_bottom = 0.98399734
+offset_left = 875.0
+offset_top = 12.0
+offset_right = 876.0
+offset_bottom = 71.0
 theme_override_fonts/font = ExtResource("3_w8frs")
-theme_override_font_sizes/font_size = 37
+theme_override_font_sizes/font_size = 55
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1719983891]
+
+[node name="Pause" parent="CanvasLayer" unique_id=1287388346 instance=ExtResource("4_mx8sn")]
 
 [connection signal="timeout" from="StartTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]

@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	var level = get_tree().root.get_child(1)
+	var level = get_tree().root.get_child(2)
 	if level.player_color ==  color_number :
 		correct.emit(self)
 	else :

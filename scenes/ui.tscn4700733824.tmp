@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://bxrgdbfh3tu0k"]
+
+[ext_resource type="Script" uid="uid://d3kp3n305vmwr" path="res://scenes/ui.gd" id="1_6rmj2"]
+[ext_resource type="Texture2D" uid="uid://bx7yyn11yicr4" path="res://triangles/T3.png" id="1_7dvkv"]
+[ext_resource type="Texture2D" uid="uid://dn022cvcrj14u" path="res://Player/P4.png" id="1_x4jx1"]
+[ext_resource type="Texture2D" uid="uid://bh07k8eg2mctk" path="res://Player/P3.png" id="2_vdcm2"]
+[ext_resource type="FontFile" uid="uid://c4vgj3l730cgw" path="res://font/child.otf" id="2_yev5y"]
+[ext_resource type="Texture2D" uid="uid://dad1apmsgvx0k" path="res://triangles/T1.png" id="3_6rmj2"]
+[ext_resource type="Texture2D" uid="uid://cijejxp3fmuou" path="res://Player/P2.png" id="4_vsj0x"]
+[ext_resource type="Texture2D" uid="uid://mpapt2wacxuk" path="res://squares/S3.png" id="5_qsv74"]
+[ext_resource type="Texture2D" uid="uid://xp3q46a351k1" path="res://squares/S2.png" id="6_vdcm2"]
+[ext_resource type="Texture2D" uid="uid://bb6p162f826vx" path="res://triangles/T2.png" id="7_h1mc3"]
+[ext_resource type="Texture2D" uid="uid://cfr75vdwu72rh" path="res://circles/C1.png" id="8_cof4p"]
+[ext_resource type="Texture2D" uid="uid://b35hksr2j48f5" path="res://squares/S1.png" id="9_f7tlh"]
+
+[node name="UI" type="Node2D" unique_id=601589518]
+script = ExtResource("1_6rmj2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1359993549]
+
+[node name="bg_color" type="ColorRect" parent="CanvasLayer" unique_id=1609924361]
+offset_right = 1760.0
+offset_bottom = 988.0
+color = Color(0.35311636, 0.35210705, 0.91426176, 1)
+
+[node name="shapes" type="Node2D" parent="CanvasLayer" unique_id=865240243]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/shapes" unique_id=111376319]
+offset_left = 1449.2576
+offset_top = -344.9169
+offset_right = 2238.6975
+offset_bottom = 299.32285
+rotation = 0.2617994
+texture = ExtResource("1_7dvkv")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/shapes" unique_id=2050321575]
+offset_left = 545.0
+offset_top = 579.0
+offset_right = 1292.2603
+offset_bottom = 1196.3424
+rotation = 0.5235988
+texture = ExtResource("2_vdcm2")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/shapes" unique_id=852028089]
+offset_left = -149.00002
+offset_top = 521.0
+offset_right = 744.16895
+offset_bottom = 1243.1272
+rotation = 0.2617994
+texture = ExtResource("3_6rmj2")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/shapes" unique_id=722720886]
+offset_left = 876.0
+offset_top = -410.0
+offset_right = 1623.2603
+offset_bottom = 207.3424
+rotation = 0.2617994
+texture = ExtResource("4_vsj0x")
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/shapes" unique_id=2077690838]
+offset_left = 55.0
+offset_top = -205.99998
+offset_right = 870.05536
+offset_bottom = 436.60956
+rotation = -0.2617994
+texture = ExtResource("5_qsv74")
+
+[node name="title_blue" type="TextureRect" parent="CanvasLayer/shapes" unique_id=2054766886]
+offset_left = 1680.0
+offset_top = 81.0
+offset_right = 2584.0725
+offset_bottom = 1165.6965
+rotation = 1.5707964
+texture = ExtResource("6_vdcm2")
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/shapes" unique_id=1747185993]
+offset_left = 1717.0001
+offset_top = 71.99997
+offset_right = 2464.2603
+offset_bottom = 689.3424
+rotation = 0.7853982
+texture = ExtResource("1_x4jx1")
+
+[node name="TextureRect7" type="TextureRect" parent="CanvasLayer/shapes" unique_id=1631830634]
+offset_left = 1389.0
+offset_top = 557.99994
+offset_right = 2250.07
+offset_bottom = 1216.2349
+rotation = 0.2617994
+texture = ExtResource("7_h1mc3")
+
+[node name="TextureRect8" type="TextureRect" parent="CanvasLayer/shapes" unique_id=799649170]
+offset_left = -359.99997
+offset_top = 92.99999
+offset_right = 548.3701
+offset_bottom = 851.15686
+rotation = 0.2617994
+texture = ExtResource("8_cof4p")
+
+[node name="TextureRect9" type="TextureRect" parent="CanvasLayer/shapes" unique_id=571626483]
+offset_left = -198.99998
+offset_top = -347.0
+offset_right = 548.26025
+offset_bottom = 270.3424
+rotation = 0.2617994
+texture = ExtResource("9_f7tlh")
+
+[node name="title_purple" type="TextureRect" parent="CanvasLayer/shapes" unique_id=694368884]
+offset_left = -378.0
+offset_top = 153.0
+offset_right = 1869.0
+offset_bottom = 905.0
+texture = ExtResource("9_f7tlh")
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=137379561]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.0
+offset_top = -78.5
+offset_right = 446.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yev5y")
+theme_override_font_sizes/font_size = 150
+text = "MATCH  EM ! "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer" unique_id=278489878]
+offset_left = 974.0
+offset_top = 558.0
+offset_right = 1582.0
+offset_bottom = 929.0
+texture_normal = ExtResource("4_vsj0x")
+texture_hover = ExtResource("2_vdcm2")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureButton" unique_id=293797485]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.033
+anchor_bottom = 0.031000001
+offset_left = 218.0
+offset_top = 169.0
+offset_right = 317.936
+offset_bottom = 198.499
+theme_override_fonts/font = ExtResource("2_yev5y")
+theme_override_font_sizes/font_size = 38
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1

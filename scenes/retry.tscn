@@ -48,7 +48,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_1qcwk")
 theme_override_font_sizes/font_size = 49
-text = "Press space to try again."
+text = "Press space or enter to try again."
 horizontal_alignment = 1
 vertical_alignment = 1
 
