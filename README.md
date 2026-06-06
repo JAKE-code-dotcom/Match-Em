@@ -1,4 +1,4 @@
-Match Em is a fast based game where you have to collect all the shapes that have the same color as your star before the time runs out.
+Match Em is a fast paced game where you have to collect all the shapes that have the same color as your star before the time runs out.
 each round is faster than the other.
 can you keep up?
 btw you can dash with shift
