@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="Match Em"
-run/main_scene="uid://bxrgdbfh3tu0k"
+config/description="Match Em is a fast based game where you have to collect all the shapes that have the same color as your star before the time runs out.
+each round is faster than the other.
+can you keep up?"
+run/main_scene="uid://busk824k3a304"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dn022cvcrj14u"
 
 [autoload]
 

@@ -1,6 +1,6 @@
 extends Node
 
-var time := 5.0
+var time := 8.0
 
 func sub_time (timerr : Timer) : 
 	time -= 0.5
