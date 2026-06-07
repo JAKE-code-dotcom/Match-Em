@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bhat3itmvgvpk" path="res://scenes/player.gd" id="1_g2els"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1552422847]
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_g2els")
 
 [node name="PlayerImage" type="Sprite2D" parent="." unique_id=1483552282]

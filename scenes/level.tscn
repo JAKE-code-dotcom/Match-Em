@@ -29,38 +29,43 @@ theme_override_font_sizes/font_size = 70
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player" parent="." unique_id=1552422847 instance=ExtResource("1_2q6dc")]
-position = Vector2(569, 287)
-
-[node name="StartTimer" type="Timer" parent="." unique_id=153598769]
-wait_time = 3.0
-one_shot = true
-
 [node name="Borders" type="Node2D" parent="." unique_id=2059676779]
+visibility_layer = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=2138431448]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1785472392]
+visibility_layer = 2
 position = Vector2(882.6875, -2)
 shape = SubResource("RectangleShape2D_w8frs")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1948176621]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1452629826]
+visibility_layer = 2
 position = Vector2(-7.5, 499)
 shape = SubResource("RectangleShape2D_mx8sn")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1496940936]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=1831498966]
+visibility_layer = 2
 position = Vector2(1783, 499)
 shape = SubResource("RectangleShape2D_mx8sn")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=233587064]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=752627304]
+visibility_layer = 2
 position = Vector2(889.125, 1005)
 shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="Player" parent="." unique_id=1552422847 instance=ExtResource("1_2q6dc")]
+position = Vector2(569, 287)
+
+[node name="StartTimer" type="Timer" parent="." unique_id=153598769]
+wait_time = 3.0
+one_shot = true
 
 [node name="shapes" type="Node2D" parent="." unique_id=953031844]
 
